@@ -1,0 +1,13 @@
+[template]
+
+src = "nginx.tmpl"
+
+dest = "/etc/nginx/sites-enabled/app.conf"
+
+keys = ["/services/appname/upstream"]
+
+owner = "root"
+mode = "0644"
+
+check_cmd = "/usr/sbin/nginx -t"
+reload_cmd = "/usr/sbin/service nginx reload"
